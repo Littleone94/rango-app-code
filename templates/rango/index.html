@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-{% load staticfiles %}
+{% load staticfiles %} <!-- New line -->
 
 <html>
 
@@ -8,22 +8,26 @@
 
 		<title>Rango</title>
 
-		<!-- CSS -->
-
-		<link rel="stylesheet" href="{% static "css/base.css" %}" />
-
-		<!-- JavaScript -->
-
-		<script src="{% static "js/jquery.js" %}"></script>
-
 	</head>
 
 	<body>
 
-		<!-- Image -->
+		<h1>Rango says...</h1>
 
-		<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+		<div>
+			hey there partner! <br />
+			<strong>{{ boldmessage }}</strong><br />
+
+		</div>
+
+		<div>
+
+			<a href="/rango/about/">About</a><br />
+			<img /> pretty cat <img src="{{ MEDIA_URL}}cat.jpg" />.<br />
+			<img src="{% static "images/rango.jpg" %}"
+				alt="Picture of Rango" /> <!-- New line -->
+		</div>
 
 	</body>
 
-</html>
+</html>
