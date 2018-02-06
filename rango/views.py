@@ -6,6 +6,10 @@ def index(request):
     context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake!"}
     return render(request, 'rango/index.html', context=context_dict)
 
+def about(request):
+    html = 'Rango says here is the about page.'+ '<a href="/rango/">Index</a>'
+    return HttpResponse(html)
+
 
 
 
