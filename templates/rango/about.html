@@ -1,18 +1,20 @@
 {% extends 'rango/base.html' %}
-	{% load staticfiles %}
-	{% block title_block %}
-		About
-	{% endblock %}
+{% load staticfiles %}
+{% block title_block %}
+    About
+{% endblock %}
 
-	{% block body_block %}
-        <div>
-	        <h1 class="page-header">About Page</h1>
-	        This tutorial has been put together by Vasiliki Aniftou
-		</div>
-		<img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
-		<p>
-		<img src="{{MEDIA_URL}}cat.jpg" alt="Nicolas Cage cat">
+{% block body_block %}
+    <div>
+        <h1 class="page-header">About Page</h1>
+        <p>This tutorial has been put together by Vasiliki Aniftou<br />
+        <p>Rango says here is the about page.</p>
+        <h3>visits: {{ visits }}</h3>
+    </div>
+    <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
+    <p>
+    <img src="{{MEDIA_URL}}cat.jpg" alt="Nicolas Cage cat">
 
-	<hr>
+<hr>
 
-	{% endblock %}
+{% endblock %}
